@@ -18,6 +18,35 @@ namespace Exercise_Linked_List_A
             LAST = null;
         }
         
+        // Add Node 
+        public void addNode()
+        {
+            int rollNo;
+            string nm;
+
+            Console.Write("\nEnter the roll number of the student: ");
+            rollNo = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\nEnter the nam of student: ");
+            nm = Console.ReadLine();
+
+            Node Newnode = new Node(); // Create new object with the new node
+
+            //Create a list Node
+            newNode.rollNumber = rollNo;
+            newNode.name = nm;
+        }
+
+
+
+
+
+
+
+
+
+
+
         public bool Search(int rollNo, ref Node previous, ref Node current)
         /*Searches for the specified node*/
         {
