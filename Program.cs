@@ -27,7 +27,7 @@ namespace Exercise_Linked_List_A
             Console.Write("\nEnter the roll number of the student: ");
             rollNo = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("\nEnter the nam of student: ");
+            Console.Write("\nEnter the Name of student: ");
             nm = Console.ReadLine();
 
             Node Newnode = new Node(); // Create new object with the new node
@@ -84,7 +84,7 @@ namespace Exercise_Linked_List_A
             //Checking for spec inside the node at the list or not
             if (Search(rollNo, ref previous, ref current) == false)
                 return false;
-            previous.next == current.next;
+            previous.next = current.next;
 
             //Procces the delete node
             if (LAST.next.rollNumber == LAST.rollNumber)
@@ -94,7 +94,7 @@ namespace Exercise_Linked_List_A
             }
             else if (rollNo == LAST.next.rollNumber)
             {
-                LAST.next == current.next;
+                LAST.next = current.next;
             }
             else
             {
@@ -170,7 +170,7 @@ namespace Exercise_Linked_List_A
                     Console.WriteLine("4. Search for a record in the list");
                     Console.WriteLine("5. Display the first record in the list");
                     Console.WriteLine("6. Exit");
-                    Console.Write("\nEnter you choice (1-5): ");
+                    Console.Write("\nEnter you choice (1-6): ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
                     {
