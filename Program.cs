@@ -26,7 +26,8 @@ namespace Exercise_Linked_List_A
                 if (rollNo == current.rollNumber)
                     return (true); /*returns true if the node is found*/
             }
-            if (rollNo = LAST.rollNumber)/* If the node is present at the end*/
+
+            if (rollNo == LAST.rollNumber)/* If the node is present at the end*/
                 return true;
             else
                 return(false);/*returns false ifthe node is not found*/
@@ -108,7 +109,7 @@ namespace Exercise_Linked_List_A
                             {
                                 obj.firstNode();
                             }
-                            berak;
+                            break;
                         case '4':
                             return;
                         default:
