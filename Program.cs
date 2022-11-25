@@ -33,8 +33,45 @@ namespace Exercise_Linked_List_A
             Node Newnode = new Node(); // Create new object with the new node
 
             //Create a list Node
-            newNode.rollNumber = rollNo;
-            newNode.name = nm;
+            Newnode.rollNumber = rollNo;
+            Newnode.name = nm;
+
+            // if the list empty
+            if (listEmpty())
+            {
+                Newnode.next = Newnode;
+                LAST = Newnode;
+            }
+
+            //addNode start from left list
+            else if (rollNo < LAST.next.rollNumber)
+            {
+                Newnode.next = LAST.next;
+                LAST.next = Newnode;
+            }
+            //add node start from right list
+            else if (rollNo > LAST.rollNumber)
+            {
+                Newnode.next = LAST.next;
+                LAST.next = Newnode;
+                LAST = Newnode;
+            }
+            // add node at the middle lit
+            else
+            {
+                Node curr, prev;
+                curr = prev = LAST.next;
+
+                int i = 0;
+                while (i < rollNo - 1)
+                {
+                    prev = curr;
+                    curr = curr.next;
+                    i++;
+                }
+                Newnode.next = curr;
+                prev.next = Newnode;
+            }
         }
 
 
